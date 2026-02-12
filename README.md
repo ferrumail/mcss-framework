@@ -26,7 +26,7 @@ MCSS adapts the [CVSS](https://www.first.org/cvss/) (Common Vulnerability Scorin
 
 ### 1. Collect Data
 
-Use [mailserver-audit-collect](https://github.com/YOURUSER/mailserver-audit-collect) on the target server:
+Use [mailserver-audit-collect](https://github.com/ferrumail/mailserver-audit-collect) on the target server:
 
 ```bash
 sudo ./mailserver-audit-collect.sh
