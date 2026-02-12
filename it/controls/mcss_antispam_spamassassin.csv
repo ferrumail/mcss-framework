@@ -1,0 +1,9 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+ANTISPAM-001,Servizio attivo,Antispam installato e in esecuzione,antispam/*/service_status.txt,High,N,L,N,N,N,N,L,L,S
+ANTISPAM-002,Versione supportata,SpamAssassin/Rspamd versione supportata,antispam/*/version.txt,High,N,H,N,N,N,L,L,L,M
+ANTISPAM-003,Integrazione MTA,Milter o content_filter configurato,milter/milter_config.txt,High,N,L,N,N,N,N,L,L,M
+ANTISPAM-004,Score threshold,Soglia spam score definita e ragionevole,antispam/spamassassin/config_files/local.cf,Medium,N,H,P,N,N,N,L,L,S
+ANTISPAM-005,Auto-learn attivo,Bayes auto-learning configurato,antispam/*/config_files,Medium,N,H,P,N,N,N,L,N,S
+ANTISPAM-006,Bayes database,Database Bayes presente e popolato,antispam/*/config_files,Medium,L,H,P,L,N,N,L,N,S
+ANTISPAM-007,RBL configurate,Realtime Blackhole Lists attive,antispam/*/config_files,High,N,L,N,N,N,N,L,L,S
+ANTISPAM-008,Config lint OK,spamassassin --lint senza errori,antispam/spamassassin/config_lint.txt,High,L,L,N,H,N,N,L,H,M

@@ -1,0 +1,7 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+LOGGING-001,Logging MTA attivo,MTA logging configurato e funzionante,postfix/config_active/postconf_n.txt,High,L,H,N,H,N,L,L,N,S
+LOGGING-002,Logging MDA attivo,MDA logging configurato e funzionante,dovecot/config_active/doveconf_n.txt,High,L,H,N,H,N,L,L,N,S
+LOGGING-003,Log centralizzato,Syslog o journald configurato,system/services.txt,Medium,L,H,N,H,N,L,L,N,M
+LOGGING-004,Errori recenti,Analisi errori critici nei log,logs/critical_events_stats.txt,Info,L,H,P,L,N,N,N,N,T
+LOGGING-005,Auth failure trend,Analisi tentativi auth falliti,logs/top_failed_auth_ips.txt,Info,L,H,P,L,N,N,N,N,T
+LOGGING-006,Log rotation attiva,Rotazione log configurata,logs/,Medium,L,H,N,H,N,N,N,L,S

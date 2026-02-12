@@ -1,0 +1,15 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+CYRUS-001,Versione supportata,Verifica che Cyrus sia versione supportata,cyrus/version.txt,High,N,H,N,N,N,L,L,L,M
+CYRUS-002,tls_cert_file definito,Certificato TLS configurato,cyrus/config_files/imapd.conf,Critical,N,L,N,N,N,H,H,N,S
+CYRUS-003,tls_key_file definito,Chiave privata TLS configurata,cyrus/config_files/imapd.conf,Critical,L,L,N,H,N,H,H,N,S
+CYRUS-004,allowplaintext no,Autenticazione plaintext disabilitata,cyrus/config_files/imapd.conf,Critical,N,L,N,N,N,H,N,N,S
+CYRUS-005,tls_min_version,Versione TLS minima configurata,cyrus/config_files/imapd.conf,High,N,L,N,N,N,H,L,N,S
+CYRUS-006,sasl_pwcheck_method,Metodo verifica password sicuro,cyrus/config_files/imapd.conf,High,L,L,N,H,N,H,H,N,M
+CYRUS-007,virtdomains configurato,Multi-domain se necessario,cyrus/config_files/imapd.conf,Medium,L,H,P,H,N,N,L,N,M
+CYRUS-008,quotawarn configurato,Avvisi quota utente attivi,cyrus/config_files/imapd.conf,Medium,L,H,P,L,N,N,N,L,S
+CYRUS-009,syslog_facility,Logging via syslog configurato,cyrus/config_files/imapd.conf,Medium,L,H,N,H,N,N,L,N,S
+CYRUS-010,servername nascosto,Server name non rivela info,cyrus/config_files/imapd.conf,Low,N,H,P,N,N,L,N,N,T
+CYRUS-011,admins restrittivo,Lista admin minimale,cyrus/config_files/imapd.conf,High,L,L,N,H,N,H,H,L,S
+CYRUS-012,Servizio attivo,Cyrus deve essere in esecuzione,system/services.txt,Critical,L,L,N,H,N,N,N,H,S
+CYRUS-013,partition-default sicuro,Partizione dati su path appropriato,cyrus/config_files/imapd.conf,Medium,L,H,N,H,N,L,L,L,M
+CYRUS-014,lmtp_downcase_rcpt,Normalizzazione indirizzi LMTP,cyrus/config_files/imapd.conf,Low,L,H,P,L,N,N,L,N,T

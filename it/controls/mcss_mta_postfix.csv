@@ -1,0 +1,19 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+POSTFIX-001,Versione supportata,Verifica che Postfix sia una versione supportata e non EOL,postfix/version.txt,High,N,H,N,N,N,L,L,L,M
+POSTFIX-002,Banner non rivela OS,smtpd_banner non deve rivelare versione OS o software,postfix/config_active/postconf_n.txt,Medium,N,H,P,N,N,L,N,N,T
+POSTFIX-003,mynetworks restrittivo,mynetworks deve contenere solo IP autorizzati per relay,postfix/config_active/postconf_n.txt,Critical,N,L,N,N,N,N,H,H,S
+POSTFIX-004,smtpd_relay_restrictions,Verifica configurazione restrizioni relay,postfix/config_active/postconf_n.txt,Critical,N,L,N,N,N,N,H,H,S
+POSTFIX-005,smtpd_recipient_restrictions,Presenza di recipient restrictions per antispam,postfix/config_active/postconf_n.txt,High,N,L,N,N,N,N,L,L,S
+POSTFIX-006,smtpd_helo_required,HELO/EHLO obbligatorio per connessioni SMTP,postfix/config_active/postconf_n.txt,Medium,N,L,N,N,N,N,L,N,T
+POSTFIX-007,strict_rfc821_envelopes,Envelope RFC 821 strict per ridurre spam,postfix/config_active/postconf_n.txt,Low,N,H,P,N,N,N,L,N,T
+POSTFIX-008,disable_vrfy_command,Comando VRFY disabilitato per prevenire enumeration,postfix/config_active/postconf_n.txt,Medium,N,L,N,N,N,L,N,N,T
+POSTFIX-009,smtpd_delay_reject,Delay reject per raccogliere più info su spammer,postfix/config_active/postconf_n.txt,Low,N,H,P,N,N,N,N,L,T
+POSTFIX-010,message_size_limit,Limite dimensione messaggi definito,postfix/config_active/postconf_n.txt,Medium,N,L,N,N,N,N,N,H,T
+POSTFIX-011,mailbox_size_limit,Limite dimensione mailbox definito,postfix/config_active/postconf_n.txt,Medium,L,L,N,L,N,N,N,H,T
+POSTFIX-012,smtpd_client_restrictions,Presenza restrizioni a livello client,postfix/config_active/postconf_n.txt,Medium,N,L,N,N,N,N,L,L,S
+POSTFIX-013,smtpd_error_sleep_time,Delay su errori per rallentare brute force,postfix/config_active/postconf_n.txt,Low,N,H,P,N,N,N,N,L,T
+POSTFIX-014,smtpd_hard_error_limit,Limite errori per disconnessione automatica,postfix/config_active/postconf_n.txt,Low,N,H,P,N,N,N,N,L,T
+POSTFIX-015,Coda non eccessiva,Verifica che la coda non sia piena (indica problemi),postfix/queue_status.txt,Medium,L,H,P,L,N,N,N,H,M
+POSTFIX-016,Servizio attivo,Postfix deve essere in esecuzione,system/services.txt,Critical,L,L,N,H,N,N,N,H,S
+POSTFIX-017,Config lint OK,postfix check non deve riportare errori,postfix/config_lint.txt,High,L,L,N,H,N,N,L,H,M
+POSTFIX-018,Submission su 587,Porta 587 con autenticazione per client,postfix/config_active/master_cf_active.txt,High,N,L,N,N,N,L,H,N,M

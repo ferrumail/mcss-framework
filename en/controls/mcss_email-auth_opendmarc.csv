@@ -1,0 +1,6 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+DMARC-001,Verification active,DMARC verification for inbound email,dmarc/service_status.txt,High,N,L,N,N,N,N,H,N,M
+DMARC-002,MTA integration,DMARC milter integrated with MTA,milter/milter_config.txt,High,N,L,N,N,N,N,H,N,M
+DMARC-003,Service active,OpenDMARC or equivalent running,dmarc/service_status.txt,High,L,L,N,H,N,N,N,H,S
+DMARC-004,Report processing,DMARC report processing configured,dmarc_reports/report_processing.txt,Medium,L,H,P,L,N,N,L,N,M
+DMARC-005,HistoryFile present,History file for aggregate reports,dmarc/config_files,Medium,L,H,P,H,N,N,L,N,S

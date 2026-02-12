@@ -1,0 +1,6 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+STORAGE-001,/var/mail separato,Directory mail su partizione dedicata,system/partitions_mail.txt,High,L,H,P,L,N,N,N,H,C
+STORAGE-002,/var/spool separato,Spool MTA su partizione dedicata,system/partitions_mail.txt,Medium,L,H,P,L,N,N,N,H,C
+STORAGE-003,Spazio > 20%,Almeno 20% spazio libero su partizioni mail,system/partitions_mail.txt,High,L,L,N,L,N,N,N,H,M
+STORAGE-004,Quota filesystem,Quote filesystem attive se necessario,system/partitions_mail.txt,Medium,L,H,P,L,N,N,N,H,M
+STORAGE-005,Mount options sicure,noexec/nosuid su partizioni mail,system/partitions_mail.txt,Medium,L,H,P,H,N,L,L,L,S

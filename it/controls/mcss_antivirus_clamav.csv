@@ -1,0 +1,8 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+ANTIVIRUS-001,ClamAV attivo,ClamAV installato e in esecuzione,antivirus/clamav/service_status.txt,Critical,N,L,N,N,P,H,H,L,S
+ANTIVIRUS-002,Versione supportata,ClamAV versione supportata,antivirus/clamav/version.txt,High,N,H,N,N,N,L,L,L,M
+ANTIVIRUS-003,Database aggiornato,Signature database aggiornato < 24h,antivirus/clamav/database_info.txt,Critical,N,L,N,N,N,H,H,L,S
+ANTIVIRUS-004,freshclam attivo,Servizio aggiornamento signature attivo,antivirus/clamav/service_status.txt,Critical,N,L,N,N,N,H,H,L,S
+ANTIVIRUS-005,Integrazione MTA,Milter o content_filter per AV configurato,milter/milter_config.txt,High,N,L,N,N,N,H,H,N,M
+ANTIVIRUS-006,clamd in ascolto,Daemon ClamAV risponde alle richieste,antivirus/clamav/service_status.txt,High,L,L,N,H,N,N,N,H,S
+ANTIVIRUS-007,No errori freshclam,freshclam log senza errori recenti,antivirus/clamav/database_info.txt,High,L,H,P,H,N,N,L,L,S

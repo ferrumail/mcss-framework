@@ -1,0 +1,13 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+TLS-001,Certificato valido,Certificato non scaduto,tls/*_info.txt,Critical,N,L,N,N,N,H,H,N,S
+TLS-002,Scadenza > 30gg,Certificato scade oltre 30 giorni,tls/*_info.txt,High,N,L,N,N,N,H,H,N,S
+TLS-003,Scadenza > 90gg,Certificato scade oltre 90 giorni,tls/*_info.txt,Medium,N,H,P,N,N,L,L,N,S
+TLS-004,CA attendibile,Certificato da CA riconosciuta non self-signed,tls/*_info.txt,High,N,L,P,N,N,L,H,N,M
+TLS-005,SAN completo,Subject Alternative Names include tutti i domini,tls/*_info.txt,High,N,L,N,N,N,N,H,N,M
+TLS-006,Key size >= 2048,Chiave RSA almeno 2048 bit,tls/*_info.txt,High,N,H,P,N,N,H,L,N,M
+TLS-007,Algoritmo firma sicuro,No SHA1 per firma certificato,tls/*_info.txt,High,N,H,P,N,N,H,L,N,M
+TLS-008,Chain completa,Catena certificati completa con intermediari,tls/*_info.txt,Medium,N,L,P,N,N,N,H,N,S
+TLS-009,smtpd_tls_security_level,TLS abilitato per SMTP inbound (may/encrypt),postfix/config_active/postconf_n.txt,High,N,L,N,N,N,H,H,N,S
+TLS-010,smtp_tls_security_level,TLS per SMTP outbound configurato,postfix/config_active/postconf_n.txt,Medium,N,L,N,N,N,H,L,N,S
+TLS-011,TLS >= 1.2,Versione TLS minima 1.2,dovecot/config_active/ssl_config.txt,High,N,L,N,N,N,H,L,N,S
+TLS-012,No cipher deboli,No RC4 DES MD5 nelle cipher suite,dovecot/config_active/ssl_config.txt,High,N,L,N,N,N,H,L,N,S

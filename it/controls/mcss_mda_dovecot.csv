@@ -1,0 +1,17 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+DOVECOT-001,Versione supportata,Verifica che Dovecot sia versione supportata,dovecot/version.txt,High,N,H,N,N,N,L,L,L,M
+DOVECOT-002,ssl = required,TLS obbligatorio per tutte le connessioni,dovecot/config_active/doveconf_n.txt,Critical,N,L,N,N,N,H,H,N,S
+DOVECOT-003,ssl_min_protocol TLSv1.2,Versione TLS minima sicura,dovecot/config_active/doveconf_n.txt,High,N,L,N,N,N,H,L,N,S
+DOVECOT-004,ssl_prefer_server_ciphers,Server sceglie cipher suite,dovecot/config_active/doveconf_n.txt,Medium,N,H,P,N,N,L,N,N,T
+DOVECOT-005,ssl_cipher_list sicuro,Cipher suite senza algoritmi deboli,dovecot/config_active/doveconf_n.txt,High,N,L,N,N,N,H,L,N,S
+DOVECOT-006,disable_plaintext_auth,Autenticazione plaintext solo su TLS,dovecot/config_active/doveconf_n.txt,Critical,N,L,N,N,N,H,N,N,S
+DOVECOT-007,auth_mechanisms sicuri,No PLAIN/LOGIN senza TLS,dovecot/config_active/doveconf_n.txt,High,N,L,N,N,N,H,N,N,S
+DOVECOT-008,login_greeting nascosto,Greeting non rivela versione,dovecot/config_active/doveconf_n.txt,Low,N,H,P,N,N,L,N,N,T
+DOVECOT-009,protocols definiti,Solo protocolli necessari abilitati,dovecot/config_active/protocols.txt,Medium,N,H,P,N,N,L,L,L,S
+DOVECOT-010,Solo porte TLS,Listener solo su 993/995 non 143/110,dovecot/config_active/listeners.txt,High,N,L,N,N,N,H,H,N,M
+DOVECOT-011,auth_verbose_passwords no,Password non loggate in chiaro,dovecot/config_active/doveconf_n.txt,High,L,L,N,H,N,H,N,N,T
+DOVECOT-012,Logging attivo,log_path configurato per audit,dovecot/config_active/doveconf_n.txt,High,L,H,N,H,N,N,L,N,S
+DOVECOT-013,Config senza errori,doveconf non riporta errori,dovecot/config_errors.txt,High,L,L,N,H,N,N,L,H,M
+DOVECOT-014,Servizio attivo,Dovecot deve essere in esecuzione,system/services.txt,Critical,L,L,N,H,N,N,N,H,S
+DOVECOT-015,Quota plugin,Plugin quota configurato se richiesto,dovecot/config_active/doveconf_N.txt,Medium,L,H,P,L,N,N,N,H,M
+DOVECOT-016,auth_cache_size,Cache autenticazione dimensionata,dovecot/config_active/doveconf_P.txt,Low,L,H,P,L,N,N,N,L,T

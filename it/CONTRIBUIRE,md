@@ -1,0 +1,141 @@
+# Contribuire a MCSS
+
+Grazie per l'interesse nel contribuire! MCSS è un progetto giovane e ogni contributo è prezioso.
+
+## Come contribuire
+
+### Segnalare problemi
+
+Apri una issue per:
+- Bug nei tool o negli script
+- Errori nei controlli (ID errati, evidenze sbagliate)
+- Documentazione poco chiara
+- Richieste di nuovi controlli
+
+### Proporre modifiche
+
+1. Fork del repository
+2. Crea un branch (`git checkout -b feature/nuovo-controllo`)
+3. Commit delle modifiche (`git commit -am 'Aggiunge controllo XYZ'`)
+4. Push del branch (`git push origin feature/nuovo-controllo`)
+5. Apri una Pull Request
+
+## Aree dove serve aiuto
+
+### Calibrazione score (priorità alta)
+
+Gli score MCSS sono basati su esperienza pratica, ma servono più punti di vista:
+
+- Alcuni controlli sono sovrastimati/sottostimati?
+- Le metriche Exploitability riflettono scenari reali?
+- L'Impact è calibrato correttamente?
+
+Per proporre modifiche agli score, includi:
+- Control ID
+- Valori attuali vs proposti
+- Razionale (scenario di attacco, esperienza pratica, riferimenti)
+
+### Controlli mancanti
+
+Quali verifiche fai nei tuoi audit che non sono coperte? Servono:
+
+- Descrizione del controllo
+- Come verificarlo (file evidenza, comando)
+- Proposta di scoring MCSS
+- Severità suggerita
+
+### Test su ambienti diversi
+
+Lo script di raccolta è testato principalmente su:
+- Debian/Ubuntu con Postfix + Dovecot
+- RHEL/CentOS con Postfix + Dovecot
+
+Servono test su:
+- FreeBSD
+- Exim come MTA primario
+- Cyrus come MDA
+- Configurazioni containerizzate
+- Cloud (AWS SES, etc. come relay)
+
+### Documentazione
+
+- Esempi di utilizzo
+- Tutorial per specifici scenari
+- Traduzioni
+
+## Formato CSV controlli
+
+Ogni controllo è definito in un file CSV con questa struttura:
+
+```csv
+control_id,area,component,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+```
+
+### Campi
+
+| Campo | Tipo | Valori ammessi |
+|-------|------|----------------|
+| control_id | string | `AREA-NNN` (es. POSTFIX-001) |
+| area | string | Nome area (es. MTA, MDA, TLS) |
+| component | string | Componente specifico |
+| control_name | string | Nome breve |
+| description | string | Descrizione completa |
+| evidence_file | string | Path relativo nell'output dello script |
+| severity | string | Critical, High, Medium, Low, Info |
+| EV | char | N, A, L, P |
+| AC | char | L, H |
+| AR | char | N, P |
+| PR | char | N, L, H |
+| UI | char | N, P, A |
+| VC | char | N, L, H |
+| VI | char | N, L, H |
+| VA | char | N, L, H |
+| RC | char | T, S, M, C, A |
+
+### Validazione
+
+Prima di inviare, valida il CSV:
+
+```bash
+perl tools/validate_mcss_csv.pl -s controls/tuo_file.csv
+```
+
+## Stile codice
+
+### Perl
+
+- `use strict; use warnings;`
+- Indentazione: 4 spazi
+- Commenti in inglese o italiano (consistente nel file)
+- POD per documentazione funzioni pubbliche
+
+### Shell
+
+- POSIX compatibile dove possibile
+- Evitare bashism se non necessari
+- Commenti per sezioni complesse
+
+## Commit messages
+
+Formato suggerito:
+
+```
+[area] Breve descrizione
+
+Descrizione più lunga se necessario.
+
+Fixes #123
+```
+
+Aree: `controls`, `tools`, `docs`, `schema`, `examples`
+
+## Code of Conduct
+
+- Rispetto reciproco
+- Feedback costruttivo
+- Focus sul merito tecnico
+- Accoglienza per i nuovi contributori
+
+## Domande?
+
+Apri una issue con tag `question` o contatta il maintainer.

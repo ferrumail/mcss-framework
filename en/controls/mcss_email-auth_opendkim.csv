@@ -1,0 +1,7 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+DKIM-001,Signing active,DKIM signing for outbound email active,dkim/service_status.txt,High,N,H,P,N,N,N,H,N,M
+DKIM-002,Key >= 2048 bit,DKIM key at least 2048 bits,dkim/keys_configured.txt,High,N,H,P,N,N,N,H,N,M
+DKIM-003,All domains signed,SigningTable includes all managed domains,dkim/keys_configured.txt,High,N,H,P,N,N,N,H,N,S
+DKIM-004,Selector configured,KeyTable with defined selector,dkim/keys_configured.txt,High,N,H,P,N,N,N,H,N,S
+DKIM-005,MTA integration,DKIM milter integrated with MTA,milter/milter_config.txt,High,N,L,N,N,N,N,H,N,M
+DKIM-006,Config test OK,opendkim -n without errors,dkim/config_test.txt,High,L,L,N,H,N,N,L,H,M

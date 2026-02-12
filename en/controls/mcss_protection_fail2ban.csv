@@ -1,0 +1,8 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+FAIL2BAN-001,Service active,Fail2ban installed and running,fail2ban/config_active/status.txt,High,N,L,N,N,N,N,N,H,S
+FAIL2BAN-002,Mail jails active,Jails for postfix/dovecot/exim enabled,fail2ban/config_active/jail_*.txt,High,N,L,N,N,N,N,N,H,S
+FAIL2BAN-003,Reasonable bantime,Ban time >= 10 minutes,fail2ban/config_files/jail.local,Medium,N,H,P,N,N,N,N,L,T
+FAIL2BAN-004,Reasonable maxretry,Max attempts <= 5 before ban,fail2ban/config_files/jail.local,Medium,N,L,N,N,N,L,N,L,T
+FAIL2BAN-005,Appropriate findtime,Time window for attempts configured,fail2ban/config_files/jail.local,Medium,N,H,P,N,N,N,N,L,T
+FAIL2BAN-006,Filters correct,Filters for mail services without errors,fail2ban/config_files/filter.d/*.conf,High,L,L,N,H,N,N,N,H,M
+FAIL2BAN-007,Banned IPs trend,Monitoring of currently banned IPs,fail2ban/config_active/banned_ips.txt,Info,L,H,P,L,N,N,N,N,T

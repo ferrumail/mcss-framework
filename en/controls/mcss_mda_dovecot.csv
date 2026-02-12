@@ -1,0 +1,17 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+DOVECOT-001,Supported version,Verify Dovecot is a supported version,dovecot/version.txt,High,N,H,N,N,N,L,L,L,M
+DOVECOT-002,ssl = required,TLS mandatory for all connections,dovecot/config_active/doveconf_n.txt,Critical,N,L,N,N,N,H,H,N,S
+DOVECOT-003,ssl_min_protocol TLSv1.2,Secure minimum TLS version,dovecot/config_active/doveconf_n.txt,High,N,L,N,N,N,H,L,N,S
+DOVECOT-004,ssl_prefer_server_ciphers,Server chooses cipher suite,dovecot/config_active/doveconf_n.txt,Medium,N,H,P,N,N,L,N,N,T
+DOVECOT-005,ssl_cipher_list secure,Cipher suite without weak algorithms,dovecot/config_active/doveconf_n.txt,High,N,L,N,N,N,H,L,N,S
+DOVECOT-006,disable_plaintext_auth,Plaintext auth only over TLS,dovecot/config_active/doveconf_n.txt,Critical,N,L,N,N,N,H,N,N,S
+DOVECOT-007,auth_mechanisms secure,No PLAIN/LOGIN without TLS,dovecot/config_active/doveconf_n.txt,High,N,L,N,N,N,H,N,N,S
+DOVECOT-008,login_greeting hidden,Greeting does not reveal version,dovecot/config_active/doveconf_n.txt,Low,N,H,P,N,N,L,N,N,T
+DOVECOT-009,protocols defined,Only necessary protocols enabled,dovecot/config_active/protocols.txt,Medium,N,H,P,N,N,L,L,L,S
+DOVECOT-010,TLS ports only,Listeners only on 993/995 not 143/110,dovecot/config_active/listeners.txt,High,N,L,N,N,N,H,H,N,M
+DOVECOT-011,auth_verbose_passwords no,Passwords not logged in clear text,dovecot/config_active/doveconf_n.txt,High,L,L,N,H,N,H,N,N,T
+DOVECOT-012,Logging active,log_path configured for audit,dovecot/config_active/doveconf_n.txt,High,L,H,N,H,N,N,L,N,S
+DOVECOT-013,Config without errors,doveconf reports no errors,dovecot/config_errors.txt,High,L,L,N,H,N,N,L,H,M
+DOVECOT-014,Service active,Dovecot must be running,system/services.txt,Critical,L,L,N,H,N,N,N,H,S
+DOVECOT-015,Quota plugin,Quota plugin configured if required,dovecot/config_active/doveconf_N.txt,Medium,L,H,P,L,N,N,N,H,M
+DOVECOT-016,auth_cache_size,Auth cache appropriately sized,dovecot/config_active/doveconf_P.txt,Low,L,H,P,L,N,N,N,L,T

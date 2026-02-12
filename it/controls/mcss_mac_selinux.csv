@@ -1,0 +1,10 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+MAC-001,MAC attivo,SELinux o AppArmor abilitato,mac/type.txt,Critical,L,L,N,H,N,H,H,H,C
+MAC-002,SELinux enforcing,SELinux in modalità enforcing non permissive,mac/selinux_status.txt,Critical,L,L,N,H,N,H,H,H,M
+MAC-003,AppArmor enabled,AppArmor kernel module caricato e attivo,mac/apparmor_status.txt,Critical,L,L,N,H,N,H,H,H,M
+MAC-004,Profili mail enforce,Profili mail in enforce non complain,mac/apparmor_enforcement.txt,High,L,L,N,H,N,H,H,L,M
+MAC-005,Booleani restrittivi,SELinux boolean mail impostati correttamente,mac/selinux_booleans_mail.txt,Medium,L,H,N,H,N,L,L,L,S
+MAC-006,Processi confinati,Processi mail in contesto SELinux corretto,mac/selinux_contexts.txt,High,L,H,N,H,N,H,H,L,M
+MAC-007,No AVC denial,Nessun denial SELinux recente per mail,mac/selinux_avc_denials.txt,Medium,L,H,P,H,N,L,L,L,M
+MAC-008,No violazioni AppArmor,Nessuna violazione AppArmor recente,mac/apparmor_violations.txt,Medium,L,H,P,H,N,L,L,L,M
+MAC-009,Porte etichettate,Porte mail con label SELinux corrette,mac/selinux_ports.txt,Medium,L,H,N,H,N,N,L,L,S

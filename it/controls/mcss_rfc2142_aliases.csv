@@ -1,0 +1,5 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+RFC2142-001,postmaster definito,Alias postmaster obbligatorio RFC 5321,aliases/rfc2142_check.txt,Critical,N,H,P,N,N,N,H,N,S
+RFC2142-002,abuse definito,Alias abuse per segnalazioni,aliases/rfc2142_check.txt,High,N,H,P,N,N,N,H,N,S
+RFC2142-003,security definito,Alias security per incident response,aliases/rfc2142_check.txt,Medium,N,H,P,N,N,N,L,N,S
+RFC2142-004,hostmaster definito,Alias hostmaster per DNS,aliases/rfc2142_check.txt,Low,N,H,P,N,N,N,L,N,S

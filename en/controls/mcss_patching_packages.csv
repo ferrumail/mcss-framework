@@ -1,0 +1,4 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+PATCHING-001,Version not EOL,Mail software not end-of-life,*/version.txt,Critical,N,H,N,N,N,H,H,H,C
+PATCHING-002,Official repository,Package from official distro repository,*/package_info.txt,High,L,H,P,H,N,H,H,L,M
+PATCHING-003,Secure build options,Compiled with security options,dovecot/build_options.txt,Medium,L,H,P,H,N,L,L,L,C

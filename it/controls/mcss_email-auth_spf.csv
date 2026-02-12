@@ -1,0 +1,5 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+SPF-001,SPF check attivo,Verifica SPF per email in entrata,spf/spf_config.txt,High,N,L,N,N,N,N,H,N,M
+SPF-002,Integrazione MTA,SPF integrato con MTA (policy/ACL),spf/spf_config.txt,High,N,L,N,N,N,N,H,N,M
+SPF-003,Azione fail configurata,Azione su SPF fail definita,spf/spf_config.txt,Medium,N,L,N,N,N,N,L,N,S
+SPF-004,Servizio attivo,policyd-spf o equivalente in esecuzione,spf/spf_config.txt,High,L,L,N,H,N,N,N,H,S

@@ -1,0 +1,9 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+FIREWALL-001,Firewall attivo,iptables/nftables/firewalld in esecuzione,firewall/type.txt,Critical,N,L,N,N,N,H,H,H,S
+FIREWALL-002,Porta 25 controllata,SMTP (25) con regole appropriate,firewall/*_mail.txt,High,N,L,N,N,N,N,H,H,S
+FIREWALL-003,Porte plaintext limitate,110/143 chiuse o limitate a LAN,firewall/*_mail.txt,High,N,L,N,N,N,H,H,N,S
+FIREWALL-004,Porte TLS aperte,993/995/465/587 accessibili,firewall/*_mail.txt,High,N,L,N,N,N,N,N,H,S
+FIREWALL-005,Porta 4190 controllata,ManageSieve con accesso limitato,firewall/*_mail.txt,Medium,N,L,N,L,N,L,L,N,S
+FIREWALL-006,Rate limiting FW,Limiti connessioni a livello firewall,firewall/*_full.txt,Medium,N,L,N,N,N,N,N,H,M
+FIREWALL-007,IPv6 considerato,Regole IPv6 coerenti con IPv4,firewall/ip6tables_mail.txt,Medium,N,L,N,N,N,H,H,H,M
+FIREWALL-008,Coerenza servizi,Regole coerenti con servizi configurati,firewall/,High,L,H,N,H,N,L,L,L,M

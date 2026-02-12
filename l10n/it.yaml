@@ -1,0 +1,553 @@
+---
+meta:
+  language: it
+  version: "1.0"
+  description: Traduzioni italiane per MCSS Framework
+
+controls:
+  # === ANTISPAM ===
+  ANTISPAM-001:
+    name: Servizio attivo
+    description: Antispam installato e in esecuzione
+  ANTISPAM-002:
+    name: Versione supportata
+    description: SpamAssassin/Rspamd versione supportata
+  ANTISPAM-003:
+    name: Integrazione MTA
+    description: Milter o content_filter configurato
+  ANTISPAM-004:
+    name: Score threshold
+    description: Soglia spam score definita e ragionevole
+  ANTISPAM-005:
+    name: Auto-learn attivo
+    description: Bayes auto-learning configurato
+  ANTISPAM-006:
+    name: Bayes database
+    description: Database Bayes presente e popolato
+  ANTISPAM-007:
+    name: RBL configurate
+    description: Realtime Blackhole Lists attive
+  ANTISPAM-008:
+    name: Config lint OK
+    description: spamassassin --lint senza errori
+
+  # === ANTIVIRUS ===
+  ANTIVIRUS-001:
+    name: ClamAV attivo
+    description: ClamAV installato e in esecuzione
+  ANTIVIRUS-002:
+    name: Versione supportata
+    description: ClamAV versione supportata
+  ANTIVIRUS-003:
+    name: Database aggiornato
+    description: Signature database aggiornato < 24h
+  ANTIVIRUS-004:
+    name: freshclam attivo
+    description: Servizio aggiornamento signature attivo
+  ANTIVIRUS-005:
+    name: Integrazione MTA
+    description: Milter o content_filter per AV configurato
+  ANTIVIRUS-006:
+    name: clamd in ascolto
+    description: Daemon ClamAV risponde alle richieste
+  ANTIVIRUS-007:
+    name: No errori freshclam
+    description: freshclam log senza errori recenti
+
+  # === AUTH ===
+  AUTH-001:
+    name: SASL configurato
+    description: SASL authentication framework attivo
+  AUTH-002:
+    name: smtpd_sasl_auth_enable
+    description: Autenticazione SASL abilitata per submission
+  AUTH-003:
+    name: sasl_security_options
+    description: noanonymous impostato per SASL
+  AUTH-004:
+    name: sasl_tls_security_options
+    description: Opzioni SASL specifiche per TLS
+  AUTH-005:
+    name: smtpd_tls_auth_only
+    description: Auth solo su connessioni TLS
+  AUTH-006:
+    name: Backend auth configurato
+    description: Backend autenticazione definito e funzionante
+  AUTH-007:
+    name: auth_mechanisms Dovecot
+    description: Meccanismi auth appropriati configurati
+  AUTH-008:
+    name: No PLAIN senza TLS
+    description: PLAIN/LOGIN solo con TLS attivo
+  AUTH-009:
+    name: Auth failure logging
+    description: Log tentativi autenticazione falliti
+  AUTH-010:
+    name: auth_policy configurato
+    description: Policy service per auth se disponibile
+
+  # === DKIM ===
+  DKIM-001:
+    name: Signing attivo
+    description: DKIM signing per email in uscita attivo
+  DKIM-002:
+    name: Chiave >= 2048 bit
+    description: Chiave DKIM almeno 2048 bit
+  DKIM-003:
+    name: Tutti domini firmati
+    description: SigningTable include tutti i domini gestiti
+  DKIM-004:
+    name: Selector configurato
+    description: KeyTable con selector definito
+  DKIM-005:
+    name: Integrazione MTA
+    description: Milter DKIM integrato con MTA
+  DKIM-006:
+    name: Config test OK
+    description: opendkim -n senza errori
+
+  # === DMARC ===
+  DMARC-001:
+    name: Verification attivo
+    description: DMARC verification per email in entrata
+  DMARC-002:
+    name: Integrazione MTA
+    description: Milter DMARC integrato con MTA
+  DMARC-003:
+    name: Servizio attivo
+    description: OpenDMARC o equivalente in esecuzione
+  DMARC-004:
+    name: Report processing
+    description: Elaborazione report DMARC configurata
+  DMARC-005:
+    name: HistoryFile presente
+    description: File storico per report aggregate
+
+  # === FAIL2BAN ===
+  FAIL2BAN-001:
+    name: Servizio attivo
+    description: Fail2ban installato e in esecuzione
+  FAIL2BAN-002:
+    name: Jail mail attive
+    description: Jail per postfix/dovecot/exim abilitate
+  FAIL2BAN-003:
+    name: Bantime ragionevole
+    description: Ban time >= 10 minuti
+  FAIL2BAN-004:
+    name: Maxretry ragionevole
+    description: Max tentativi <= 5 prima del ban
+  FAIL2BAN-005:
+    name: Findtime appropriato
+    description: Finestra temporale per tentativi configurata
+  FAIL2BAN-006:
+    name: Filtri corretti
+    description: Filtri per servizi mail senza errori
+  FAIL2BAN-007:
+    name: IP bannati trend
+    description: Monitoraggio IP attualmente bannati
+
+  # === FIREWALL ===
+  FIREWALL-001:
+    name: Firewall attivo
+    description: iptables/nftables/firewalld in esecuzione
+  FIREWALL-002:
+    name: Porta 25 controllata
+    description: SMTP (25) con regole appropriate
+  FIREWALL-003:
+    name: Porte plaintext limitate
+    description: 110/143 chiuse o limitate a LAN
+  FIREWALL-004:
+    name: Porte TLS aperte
+    description: 993/995/465/587 accessibili
+  FIREWALL-005:
+    name: Porta 4190 controllata
+    description: ManageSieve con accesso limitato
+  FIREWALL-006:
+    name: Rate limiting FW
+    description: Limiti connessioni a livello firewall
+  FIREWALL-007:
+    name: IPv6 considerato
+    description: Regole IPv6 coerenti con IPv4
+  FIREWALL-008:
+    name: Coerenza servizi
+    description: Regole coerenti con servizi configurati
+
+  # === LOGGING ===
+  LOGGING-001:
+    name: Logging MTA attivo
+    description: MTA logging configurato e funzionante
+  LOGGING-002:
+    name: Logging MDA attivo
+    description: MDA logging configurato e funzionante
+  LOGGING-003:
+    name: Log centralizzato
+    description: Syslog o journald configurato
+  LOGGING-004:
+    name: Errori recenti
+    description: Analisi errori critici nei log
+  LOGGING-005:
+    name: Auth failure trend
+    description: Analisi tentativi auth falliti
+  LOGGING-006:
+    name: Log rotation attiva
+    description: Rotazione log configurata
+
+  # === MAC ===
+  MAC-001:
+    name: MAC attivo
+    description: SELinux o AppArmor abilitato
+  MAC-002:
+    name: SELinux enforcing
+    description: SELinux in modalità enforcing non permissive
+  MAC-003:
+    name: AppArmor enabled
+    description: AppArmor kernel module caricato e attivo
+  MAC-004:
+    name: Profili mail enforce
+    description: Profili mail in enforce non complain
+  MAC-005:
+    name: Booleani restrittivi
+    description: SELinux boolean mail impostati correttamente
+  MAC-006:
+    name: Processi confinati
+    description: Processi mail in contesto SELinux corretto
+  MAC-007:
+    name: No AVC denial
+    description: Nessun denial SELinux recente per mail
+  MAC-008:
+    name: No violazioni AppArmor
+    description: Nessuna violazione AppArmor recente
+  MAC-009:
+    name: Porte etichettate
+    description: Porte mail con label SELinux corrette
+
+  # === MDA CYRUS ===
+  CYRUS-001:
+    name: Versione supportata
+    description: Verifica che Cyrus sia versione supportata
+  CYRUS-002:
+    name: tls_cert_file definito
+    description: Certificato TLS configurato
+  CYRUS-003:
+    name: tls_key_file definito
+    description: Chiave privata TLS configurata
+  CYRUS-004:
+    name: allowplaintext no
+    description: Autenticazione plaintext disabilitata
+  CYRUS-005:
+    name: tls_min_version
+    description: Versione TLS minima configurata
+  CYRUS-006:
+    name: sasl_pwcheck_method
+    description: Metodo verifica password sicuro
+  CYRUS-007:
+    name: virtdomains configurato
+    description: Multi-domain se necessario
+  CYRUS-008:
+    name: quotawarn configurato
+    description: Avvisi quota utente attivi
+  CYRUS-009:
+    name: syslog_facility
+    description: Logging via syslog configurato
+  CYRUS-010:
+    name: servername nascosto
+    description: Server name non rivela info
+  CYRUS-011:
+    name: admins restrittivo
+    description: Lista admin minimale
+  CYRUS-012:
+    name: Servizio attivo
+    description: Cyrus deve essere in esecuzione
+  CYRUS-013:
+    name: partition-default sicuro
+    description: Partizione dati su path appropriato
+  CYRUS-014:
+    name: lmtp_downcase_rcpt
+    description: Normalizzazione indirizzi LMTP
+
+  # === MDA DOVECOT ===
+  DOVECOT-001:
+    name: Versione supportata
+    description: Verifica che Dovecot sia versione supportata
+  DOVECOT-002:
+    name: ssl = required
+    description: TLS obbligatorio per tutte le connessioni
+  DOVECOT-003:
+    name: ssl_min_protocol TLSv1.2
+    description: Versione TLS minima sicura
+  DOVECOT-004:
+    name: ssl_prefer_server_ciphers
+    description: Server sceglie cipher suite
+  DOVECOT-005:
+    name: ssl_cipher_list sicuro
+    description: Cipher suite senza algoritmi deboli
+  DOVECOT-006:
+    name: disable_plaintext_auth
+    description: Autenticazione plaintext solo su TLS
+  DOVECOT-007:
+    name: auth_mechanisms sicuri
+    description: No PLAIN/LOGIN senza TLS
+  DOVECOT-008:
+    name: login_greeting nascosto
+    description: Greeting non rivela versione
+  DOVECOT-009:
+    name: protocols definiti
+    description: Solo protocolli necessari abilitati
+  DOVECOT-010:
+    name: Solo porte TLS
+    description: Listener solo su 993/995 non 143/110
+  DOVECOT-011:
+    name: auth_verbose_passwords no
+    description: Password non loggate in chiaro
+  DOVECOT-012:
+    name: Logging attivo
+    description: log_path configurato per audit
+  DOVECOT-013:
+    name: Config senza errori
+    description: doveconf non riporta errori
+  DOVECOT-014:
+    name: Servizio attivo
+    description: Dovecot deve essere in esecuzione
+  DOVECOT-015:
+    name: Quota plugin
+    description: Plugin quota configurato se richiesto
+  DOVECOT-016:
+    name: auth_cache_size
+    description: Cache autenticazione dimensionata
+
+  # === MTA EXIM ===
+  EXIM-001:
+    name: Versione supportata
+    description: Verifica che Exim sia una versione supportata
+  EXIM-002:
+    name: Banner non rivela versione
+    description: smtp_banner non deve rivelare info sensibili
+  EXIM-003:
+    name: host_lookup configurato
+    description: Risoluzione DNS per hostname client
+  EXIM-004:
+    name: acl_smtp_rcpt definito
+    description: ACL per RCPT TO obbligatoria
+  EXIM-005:
+    name: acl_smtp_data definito
+    description: ACL per DATA phase per content filtering
+  EXIM-006:
+    name: No relay aperto
+    description: verify = recipient deve bloccare relay non autorizzato
+  EXIM-007:
+    name: HELO/EHLO verificato
+    description: Verifica HELO in ACL per ridurre spam
+  EXIM-008:
+    name: message_size_limit
+    description: Limite dimensione messaggi configurato
+  EXIM-009:
+    name: smtp_accept_max
+    description: Limite connessioni simultanee ragionevole
+  EXIM-010:
+    name: smtp_accept_max_per_host
+    description: Limite connessioni per host per DoS prevention
+  EXIM-011:
+    name: ACL rate limiting
+    description: Rate limiting in ACL per abuse prevention
+  EXIM-012:
+    name: DKIM signing configurato
+    description: Firma DKIM per email in uscita
+  EXIM-013:
+    name: SPF check in ACL
+    description: Verifica SPF per email in entrata
+  EXIM-014:
+    name: av_scanner configurato
+    description: Integrazione antivirus ClamAV
+  EXIM-015:
+    name: spamd_address configurato
+    description: Integrazione SpamAssassin
+  EXIM-016:
+    name: Coda non eccessiva
+    description: Verifica che la coda non sia piena
+  EXIM-017:
+    name: Servizio attivo
+    description: Exim deve essere in esecuzione
+  EXIM-018:
+    name: Config test OK
+    description: exim -bV non deve riportare errori config
+
+  # === MTA POSTFIX ===
+  POSTFIX-001:
+    name: Versione supportata
+    description: Verifica che Postfix sia una versione supportata e non EOL
+  POSTFIX-002:
+    name: Banner non rivela OS
+    description: smtpd_banner non deve rivelare versione OS o software
+  POSTFIX-003:
+    name: mynetworks restrittivo
+    description: mynetworks deve contenere solo IP autorizzati per relay
+  POSTFIX-004:
+    name: smtpd_relay_restrictions
+    description: Verifica configurazione restrizioni relay
+  POSTFIX-005:
+    name: smtpd_recipient_restrictions
+    description: Presenza di recipient restrictions per antispam
+  POSTFIX-006:
+    name: smtpd_helo_required
+    description: HELO/EHLO obbligatorio per connessioni SMTP
+  POSTFIX-007:
+    name: strict_rfc821_envelopes
+    description: Envelope RFC 821 strict per ridurre spam
+  POSTFIX-008:
+    name: disable_vrfy_command
+    description: Comando VRFY disabilitato per prevenire enumeration
+  POSTFIX-009:
+    name: smtpd_delay_reject
+    description: Delay reject per raccogliere più info su spammer
+  POSTFIX-010:
+    name: message_size_limit
+    description: Limite dimensione messaggi definito
+  POSTFIX-011:
+    name: mailbox_size_limit
+    description: Limite dimensione mailbox definito
+  POSTFIX-012:
+    name: smtpd_client_restrictions
+    description: Presenza restrizioni a livello client
+  POSTFIX-013:
+    name: smtpd_error_sleep_time
+    description: Delay su errori per rallentare brute force
+  POSTFIX-014:
+    name: smtpd_hard_error_limit
+    description: Limite errori per disconnessione automatica
+  POSTFIX-015:
+    name: Coda non eccessiva
+    description: Verifica che la coda non sia piena (indica problemi)
+  POSTFIX-016:
+    name: Servizio attivo
+    description: Postfix deve essere in esecuzione
+  POSTFIX-017:
+    name: Config lint OK
+    description: postfix check non deve riportare errori
+  POSTFIX-018:
+    name: Submission su 587
+    description: Porta 587 con autenticazione per client
+
+  # === PATCHING ===
+  PATCHING-001:
+    name: Versione non EOL
+    description: Software mail non end-of-life
+  PATCHING-002:
+    name: Repository ufficiale
+    description: Package da repository ufficiale distro
+  PATCHING-003:
+    name: Build options sicure
+    description: Compilazione con opzioni di sicurezza
+
+  # === POLICY ===
+  POLICY-001:
+    name: Rate limiting attivo
+    description: Rate limiting configurato su MTA
+  POLICY-002:
+    name: Connection rate limit
+    description: Limite connessioni per client definito
+  POLICY-003:
+    name: Message rate limit
+    description: Limite messaggi per client definito
+  POLICY-004:
+    name: Recipient rate limit
+    description: Limite destinatari per messaggio
+  POLICY-005:
+    name: Greylisting attivo
+    description: Postgrey o equivalente configurato se applicabile
+  POLICY-006:
+    name: Policy daemon attivo
+    description: Postfwd/policyd se utilizzato
+
+  # === RFC2142 ===
+  RFC2142-001:
+    name: postmaster definito
+    description: Alias postmaster obbligatorio RFC 5321
+  RFC2142-002:
+    name: abuse definito
+    description: Alias abuse per segnalazioni
+  RFC2142-003:
+    name: security definito
+    description: Alias security per incident response
+  RFC2142-004:
+    name: hostmaster definito
+    description: Alias hostmaster per DNS
+
+  # === SPF ===
+  SPF-001:
+    name: SPF check attivo
+    description: Verifica SPF per email in entrata
+  SPF-002:
+    name: Integrazione MTA
+    description: SPF integrato con MTA (policy/ACL)
+  SPF-003:
+    name: Azione fail configurata
+    description: Azione su SPF fail definita
+  SPF-004:
+    name: Servizio attivo
+    description: policyd-spf o equivalente in esecuzione
+
+  # === STORAGE ===
+  STORAGE-001:
+    name: /var/mail separato
+    description: Directory mail su partizione dedicata
+  STORAGE-002:
+    name: /var/spool separato
+    description: Spool MTA su partizione dedicata
+  STORAGE-003:
+    name: Spazio > 20%
+    description: Almeno 20% spazio libero su partizioni mail
+  STORAGE-004:
+    name: Quota filesystem
+    description: Quote filesystem attive se necessario
+  STORAGE-005:
+    name: Mount options sicure
+    description: noexec/nosuid su partizioni mail
+
+  # === TIMESTAMP ===
+  TIMESTAMP-001:
+    name: Config vs service
+    description: Config modificata dopo avvio servizio
+  TIMESTAMP-002:
+    name: Config coerente
+    description: File config coerenti con config attiva
+  TIMESTAMP-003:
+    name: Servizi riavviati
+    description: Tutti i servizi riavviati post-modifica
+
+  # === TLS ===
+  TLS-001:
+    name: Certificato valido
+    description: Certificato non scaduto
+  TLS-002:
+    name: Scadenza > 30gg
+    description: Certificato scade oltre 30 giorni
+  TLS-003:
+    name: Scadenza > 90gg
+    description: Certificato scade oltre 90 giorni
+  TLS-004:
+    name: CA attendibile
+    description: Certificato da CA riconosciuta non self-signed
+  TLS-005:
+    name: SAN completo
+    description: Subject Alternative Names include tutti i domini
+  TLS-006:
+    name: Key size >= 2048
+    description: Chiave RSA almeno 2048 bit
+  TLS-007:
+    name: Algoritmo firma sicuro
+    description: No SHA1 per firma certificato
+  TLS-008:
+    name: Chain completa
+    description: Catena certificati completa con intermediari
+  TLS-009:
+    name: smtpd_tls_security_level
+    description: TLS abilitato per SMTP inbound (may/encrypt)
+  TLS-010:
+    name: smtp_tls_security_level
+    description: TLS per SMTP outbound configurato
+  TLS-011:
+    name: TLS >= 1.2
+    description: Versione TLS minima 1.2
+  TLS-012:
+    name: No cipher deboli
+    description: No RC4 DES MD5 nelle cipher suite

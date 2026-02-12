@@ -1,0 +1,4 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+TIMESTAMP-001,Config vs service,Config modificata dopo avvio servizio,timestamps/service_vs_config.txt,High,L,H,P,H,N,N,L,H,S
+TIMESTAMP-002,Config coerente,File config coerenti con config attiva,timestamps/service_vs_config.txt,High,L,H,P,H,N,N,L,H,M
+TIMESTAMP-003,Servizi riavviati,Tutti i servizi riavviati post-modifica,timestamps/service_vs_config.txt,High,L,H,P,H,N,N,L,H,S

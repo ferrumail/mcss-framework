@@ -1,0 +1,7 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+POLICY-001,Rate limiting attivo,Rate limiting configurato su MTA,policy/postfix_ratelimit.txt,High,N,L,N,N,N,N,N,H,S
+POLICY-002,Connection rate limit,Limite connessioni per client definito,policy/postfix_ratelimit.txt,High,N,L,N,N,N,N,N,H,T
+POLICY-003,Message rate limit,Limite messaggi per client definito,policy/postfix_ratelimit.txt,High,N,L,N,N,N,N,L,H,T
+POLICY-004,Recipient rate limit,Limite destinatari per messaggio,policy/postfix_ratelimit.txt,Medium,N,L,N,N,N,N,L,L,T
+POLICY-005,Greylisting attivo,Postgrey o equivalente configurato se applicabile,policy/postgrey.txt,Medium,N,L,N,N,N,N,L,L,M
+POLICY-006,Policy daemon attivo,Postfwd/policyd se utilizzato,policy/*status.txt,Medium,L,L,N,H,N,N,N,H,M

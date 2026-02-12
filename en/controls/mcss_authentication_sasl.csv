@@ -1,0 +1,11 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+AUTH-001,SASL configured,SASL authentication framework active,postfix/config_active/sasl_config.txt,High,N,L,N,N,N,H,H,N,M
+AUTH-002,smtpd_sasl_auth_enable,SASL authentication enabled for submission,postfix/config_active/postconf_n.txt,High,N,L,N,N,N,H,H,N,S
+AUTH-003,sasl_security_options,noanonymous set for SASL,postfix/config_active/postconf_n.txt,High,N,L,N,N,N,H,H,N,T
+AUTH-004,sasl_tls_security_options,SASL options specific to TLS,postfix/config_active/postconf_n.txt,Medium,N,L,N,N,N,H,L,N,T
+AUTH-005,smtpd_tls_auth_only,Auth only over TLS connections,postfix/config_active/postconf_n.txt,Critical,N,L,N,N,N,H,N,N,S
+AUTH-006,Auth backend configured,Authentication backend defined and working,dovecot/config_active/auth_config.txt,High,L,L,N,H,N,H,H,L,M
+AUTH-007,auth_mechanisms Dovecot,Appropriate auth mechanisms configured,dovecot/config_active/doveconf_n.txt,High,N,L,N,N,N,H,N,N,S
+AUTH-008,No PLAIN without TLS,PLAIN/LOGIN only with TLS active,dovecot/config_active/auth_config.txt,Critical,N,L,N,N,N,H,N,N,S
+AUTH-009,Auth failure logging,Failed authentication attempts logged,dovecot/config_active/doveconf_n.txt,High,L,H,N,H,N,L,N,N,S
+AUTH-010,auth_policy configured,Policy service for auth if available,dovecot/config_active/doveconf_P.txt,Medium,L,H,P,H,N,L,L,N,M

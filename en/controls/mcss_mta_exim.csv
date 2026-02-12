@@ -1,0 +1,19 @@
+control_id,control_name,description,evidence_file,severity,EV,AC,AR,PR,UI,VC,VI,VA,RC
+EXIM-001,Supported version,Verify Exim is a supported version,exim/version.txt,High,N,H,N,N,N,L,L,L,M
+EXIM-002,Banner hides version,smtp_banner should not reveal sensitive info,exim/config_active/exim_bP.txt,Medium,N,H,P,N,N,L,N,N,T
+EXIM-003,host_lookup configured,DNS resolution for client hostname,exim/config_active/exim_bP.txt,Medium,N,H,P,N,N,N,L,N,S
+EXIM-004,acl_smtp_rcpt defined,ACL for RCPT TO mandatory,exim/security/acl_summary.txt,Critical,N,L,N,N,N,N,H,H,M
+EXIM-005,acl_smtp_data defined,ACL for DATA phase for content filtering,exim/security/acl_summary.txt,High,N,L,N,N,N,L,H,L,M
+EXIM-006,No open relay,verify = recipient must block unauthorized relay,exim/security/acl_summary.txt,Critical,N,L,N,N,N,N,H,H,M
+EXIM-007,HELO/EHLO verified,HELO verification in ACL to reduce spam,exim/security/acl_summary.txt,Medium,N,L,N,N,N,N,L,N,S
+EXIM-008,message_size_limit,Message size limit configured,exim/config_active/exim_bP.txt,Medium,N,L,N,N,N,N,N,H,T
+EXIM-009,smtp_accept_max,Reasonable simultaneous connection limit,exim/security/ratelimit_config.txt,Medium,N,L,N,N,N,N,N,H,T
+EXIM-010,smtp_accept_max_per_host,Per-host connection limit for DoS prevention,exim/security/ratelimit_config.txt,Medium,N,L,N,N,N,N,N,H,T
+EXIM-011,ACL rate limiting,Rate limiting in ACL for abuse prevention,exim/security/ratelimit_config.txt,High,N,L,N,N,N,N,L,H,M
+EXIM-012,DKIM signing configured,DKIM signing for outbound email,exim/security/dkim_config.txt,High,N,H,P,N,N,N,H,N,M
+EXIM-013,SPF check in ACL,SPF verification for inbound email,exim/security/spf_config.txt,High,N,L,N,N,N,N,H,N,M
+EXIM-014,av_scanner configured,ClamAV antivirus integration,exim/security/content_scanning.txt,High,N,L,N,N,N,H,H,N,M
+EXIM-015,spamd_address configured,SpamAssassin integration,exim/security/content_scanning.txt,High,N,L,N,N,N,N,L,L,M
+EXIM-016,Queue not excessive,Verify queue is not full,exim/queue_status.txt,Medium,L,H,P,L,N,N,N,H,M
+EXIM-017,Service active,Exim must be running,system/services.txt,Critical,L,L,N,H,N,N,N,H,S
+EXIM-018,Config test OK,exim -bV should report no config errors,exim/config_test.txt,High,L,L,N,H,N,N,L,H,M
