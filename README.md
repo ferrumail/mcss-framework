@@ -136,11 +136,10 @@ Key areas where help is needed:
 
 ## Governance (Initial Proposal)
 
-MCSS aims to evolve as an open standard.
-Decisions are made transparently via GitHub Discussions.
-Contributors who demonstrate sustained expertise may become maintainers.
-Governance will evolve as the contributor base grows.
-
+- MCSS aims to evolve as an open standard
+- Decisions are made transparently via GitHub Discussions
+- Contributors who demonstrate sustained expertise may become maintainers
+- Governance will evolve as the contributor base grows
 
 ## Known Limitations
 
