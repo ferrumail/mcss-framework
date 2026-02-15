@@ -134,6 +134,27 @@ Key areas where help is needed:
 - Testing on diverse environments
 - Translations
 
+## ⚖️ Governance: Holacracy & Self-Management
+I released this methodology under the Artistic License 2.0 to ensure it remains free, accessible, and consistent. To evolve it, I am proposing an Holacracy model instead of a traditional steering group.
+Why Holacracy?
+
+    Purpose-Driven: No bosses, just a shared mission. We are led by the project’s goals, not by a hierarchy.
+    Distributed Authority: If you fill a role, you have full decision-making power within its scope—no bureaucratic bottlenecks.
+    Roles over Titles: Our structure is made of dynamic circles and roles that evolve alongside the project.
+
+    "In this system, authority belongs to the process and the roles that serve the purpose, not to individuals."
+
+### 🚀 Join the Circle
+To kickstart this process, I have defined the following Key Roles. If you have the expertise and want to help shape a new security standard for mail servers, this is your chance to lead a specific domain:
+
+    Methodology Architect: Ensures the integrity and consistency of the master check registry.
+    Implementation Leads (Postfix, Exim, Dovecot, etc.): Technical owners of software-specific configurations and YAML files.
+    Linguistic Steward: Manages I18N YAML files and ensures high-quality technical translations.
+    Security Auditor: Monitors new vulnerabilities and updates the standard's security policies.
+
+*Ready to step into one of these roles? Open an Issue or start a thread in the Discussions section!*
+
+
 ## Known Limitations
 
 - Covers ~65% of a complete audit (the rest requires interviews)
