@@ -120,21 +120,15 @@ Il framework è in sviluppo attivo. Servono:
 
 Vedi [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## ⚖️ Governance: Holacracy & Autogestione
-Ho rilasciato questa metodologia sotto licenza Artistic 2.0 affinché resti libera, accessibile e coerente nel tempo. Per evolverla, non voglio costruire una gerarchia tradizionale: propongo di adottare l'Holacracy.
-Perché questa scelta?
+Governance (Initial Proposal)
 
-    Nessun Capo, un solo Scopo: Non cerco seguaci, ma partner guidati dallo scopo del progetto.
-    Autorità Distribuita: Se ricopri un ruolo, hai la piena autonomia decisionale nel tuo ambito di competenza, senza colli di bottiglia burocratici.
-    Responsabilità, non Titoli: La nostra struttura è fatta di cerchi e ruoli dinamici che evolvono con il progetto.
-
-    "In questo sistema, l'autorità non appartiene alle persone, ma al processo e ai ruoli che servono lo scopo."
-
-### 🚀 Unisciti al progetto
-Per avviare questo processo, ho definito i primi Ruoli Chiave. Se hai le competenze e vuoi contribuire a definire un nuovo standard di sicurezza per i mail server, questa è un'opportunità per sperimentare un modello di lavoro all'avanguardia.
-(Inserisci qui la lista dei ruoli, es: Protocol Architect, Security Auditor, Community Lead, ecc.)
-Ti senti pronto a ricoprire uno di questi ruoli? Apri una Issue o scrivi nella sezione Discussions!
-
+    MCSS mira ad evolversi as uno standard aperto
+    Le decisioni saranno prese in trasparenza nelle Discussions su Github
+    Chi contribuisce dimostrando competenza sarà un candidato a mantainers
+    La governance evolverà con la dimensione della comunità di contributori, 
+    se attualmente la leadership è detenuta dal fondatore, questa non è una 
+    condizione immutabile. 
+    
 
 ## Limitazioni note
 
