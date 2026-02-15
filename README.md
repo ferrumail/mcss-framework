@@ -141,6 +141,10 @@ Key areas where help is needed:
 - Contributors who demonstrate sustained expertise may become maintainers
 - Governance will evolve as the contributor base grows
 
+MCSS is currently founder-led but intended to evolve into a community-driven standard.
+
+Maintainers will emerge based on sustained, high-quality contributions.
+
 ## Known Limitations
 
 - Covers ~65% of a complete audit (the rest requires interviews)
