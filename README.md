@@ -22,6 +22,14 @@ MCSS adapts the [CVSS](https://www.first.org/cvss/) (Common Vulnerability Scorin
 - **Documented methodology**, transparent and reproducible
 - **Evidence correlation** with automated data collection
 
+## Purpose
+
+MCSS is developed both as a practical tool for infrastructure quality assessment and as a long-term technical research initiative.
+
+Operational services such as Fast Scan and assessment activities help sustain the development and validation of the framework.
+
+The goal of MCSS is not to add complexity to verification practices, but to help technical teams focus on meaningful operational improvements.
+
 ## Quick Start
 
 ### 1. Collect Data
