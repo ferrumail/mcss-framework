@@ -30,6 +30,14 @@ Operational services such as Fast Scan and assessment activities help sustain th
 
 The goal of MCSS is not to add complexity to verification practices, but to help technical teams focus on meaningful operational improvements.
 
+
+## Philosophy / Principles
+
+-   measurability
+-   repeatability
+-    vendor independence
+
+
 ## Quick Start
 
 ### 1. Collect Data
