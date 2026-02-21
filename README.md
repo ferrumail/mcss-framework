@@ -22,11 +22,27 @@ MCSS adapts the [CVSS](https://www.first.org/cvss/) (Common Vulnerability Scorin
 - **Documented methodology**, transparent and reproducible
 - **Evidence correlation** with automated data collection
 
+## Purpose
+
+MCSS is developed both as a practical tool for infrastructure quality assessment and as a long-term technical research initiative.
+
+Operational services such as Fast Scan and assessment activities help sustain the development and validation of the framework.
+
+The goal of MCSS is not to add complexity to verification practices, but to help technical teams focus on meaningful operational improvements.
+
+
+## Philosophy / Principles
+
+-   measurability
+-   repeatability
+-    vendor independence
+
+
 ## Quick Start
 
 ### 1. Collect Data
 
-Use [mailserver-audit-collect](https://github.com/YOURUSER/mailserver-audit-collect) on the target server:
+Use [mailserver-audit-collect](https://github.com/ferrumail/mailserver-audit-collect) on the target server:
 
 ```bash
 sudo ./mailserver-audit-collect.sh
@@ -133,6 +149,17 @@ Key areas where help is needed:
 - Missing controls identification
 - Testing on diverse environments
 - Translations
+
+## Governance (Initial Proposal)
+
+- MCSS aims to evolve as an open standard
+- Decisions are made transparently via GitHub Discussions
+- Contributors who demonstrate sustained expertise may become maintainers
+- Governance will evolve as the contributor base grows
+
+MCSS is currently founder-led but intended to evolve into a community-driven standard.
+
+Maintainers will emerge based on sustained, high-quality contributions.
 
 ## Known Limitations
 

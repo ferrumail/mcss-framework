@@ -120,6 +120,16 @@ Il framework è in sviluppo attivo. Servono:
 
 Vedi [CONTRIBUTING.md](CONTRIBUTING.md).
 
+Governance (Initial Proposal)
+
+    MCSS mira ad evolversi as uno standard aperto
+    Le decisioni saranno prese in trasparenza nelle Discussions su Github
+    Chi contribuisce dimostrando competenza sarà un candidato a mantainers
+    La governance evolverà con la dimensione della comunità di contributori, 
+    se attualmente la leadership è detenuta dal fondatore, questa non è una 
+    condizione immutabile. 
+    
+
 ## Limitazioni note
 
 - Copre solo il 65% dei controlli di un audit completo (il resto richiede interviste)
