@@ -7,9 +7,9 @@ Organizations usually check:
 - Compliance
 - Performance
 
-But rarely evaluate configuration maturity as a whole system property.
+But configuration maturity is rarely evaluated as a systemic property.
 
-MCSS was created to address this gap.
+MCSS was created to provide a structured response to this gap.
 
 The philosophy behind MCSS is:
 
@@ -23,3 +23,22 @@ It is about helping technical teams understand where they stand and how to impro
 
 Good systems are not built by accident.  
 They are built by measurable progress.
+
+## What MCSS Introduces
+
+MCSS introduces a structured maturity scoring model focused on configuration quality.
+
+Rather than performing isolated verification checks, MCSS aims to provide:
+
+- A measurable maturity level
+- A repeatable evaluation method
+- A framework for progressive improvement
+
+## What MCSS Is Not
+
+MCSS is not:
+- A compliance certification scheme
+- A security-only audit methodology
+- A vendor-specific evaluation tool
+
+It is a configuration maturity framework designed to support operational decision making.
