@@ -33,10 +33,13 @@ The goal of MCSS is not to add complexity to verification practices, but to help
 
 ## Philosophy / Principles
 
--   measurability
--   repeatability
--    vendor independence
+- measurability
+- repeatability
+- vendor independence
 
+[VISION](VISION.md)
+
+[WHY MCSS](WHY_MCSS.md)
 
 ## Quick Start
 
