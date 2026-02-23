@@ -1,4 +1,5 @@
 # MCSS — Mailserver Configuration Scoring System
+🇬🇧 English | [🇮🇹 Italiano](it/README.md)
 
 An open framework for assessing mailserver security configurations.
 
