@@ -48,12 +48,12 @@ ma una valutazione implicita e incoerente.
 
 Uno degli obiettivi centrali è permettere confronti longitudinali:
 
-- La configurazione A oggi è migliore di ieri?
+- La configurazione ad oggi è migliore di ieri?
 - L'introduzione di una misura migliora davvero il punteggio?
 - Esistono regressioni nella qualità complessiva?
 
 Senza un modello stabile,
-queste domande restano impressionistiche.
+queste domande restano aperte e irrisolte.
 
 ## Un framework aperto
 

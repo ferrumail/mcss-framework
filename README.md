@@ -22,7 +22,7 @@ MCSS adapts the [CVSS](https://www.first.org/cvss/) (Common Vulnerability Scorin
 - **Documented methodology**, transparent and reproducible
 - **Evidence correlation** with automated data collection
 
-## Purpose
+## The Purpose
 
 MCSS is developed both as a practical tool for infrastructure quality assessment and as a long-term technical research initiative.
 
@@ -129,7 +129,14 @@ Each control is evaluated on two dimensions:
 - Integrity Impact (N/L/H)
 - Availability Impact (N/L/H)
 
-See [Methodology](en/docs/METHODOLOGY.md) for details.
+## In-depth Documents
+
+To better understand the methodological approach of the framework:
+
+* [METHODOLOGY](en/docs/METHODOLOGY.md)
+* [Vision](VISION.md)
+* [WHY MCSS](WHY_MCSS.md)
+
 
 ## Localization
 
