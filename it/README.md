@@ -13,6 +13,7 @@ Esistono CIS Benchmark per Linux, Apache, MySQL, PostgreSQL, Windows Server — 
 
 NIST SP 800-45 v2 (2007) fornisce linee guida generali ma non controlli specifici con scoring. È anche datato — parla ancora di Sendmail come scelta primaria.
 
+
 ## La proposta
 
 MCSS adatta il modello [CVSS](https://www.first.org/cvss/) (Common Vulnerability Scoring System) al contesto delle configurazioni mailserver:
@@ -21,6 +22,28 @@ MCSS adatta il modello [CVSS](https://www.first.org/cvss/) (Common Vulnerability
 - **Scoring 0.0-10.0** basato su exploitability e impact
 - **Metodologia documentata** e riproducibile
 - **Correlazione con evidenze** raccolte automaticamente
+
+
+## Lo scopo
+
+MCSS è sviluppato sia come strumento pratico per la valutazione della qualità infrastrutturale, sia come iniziativa di ricerca tecnica a lungo termine.
+I servizi operativi come Fast Scan e le attività di assessment contribuiscono a sostenere lo sviluppo e la validazione del framework.
+L'obiettivo di MCSS non è aggiungere complessità alle pratiche di verifica, ma aiutare i team tecnici a concentrarsi su miglioramenti operativi concreti e significativi.
+
+## Filosofia / Principi
+
+- misurabilità
+- ripetibilità
+- indipendenza dal fornitore
+
+## Documenti di approfondimento
+
+Per comprendere meglio l'impostazione metodologica del framework:
+
+- [La visione](docs/VISIONE.md)
+- [Perché MCSS](docs/Perché_MCSS.md)
+
+
 
 ## Quick Start
 
@@ -107,7 +130,17 @@ Ogni controllo è valutato su due dimensioni:
 - Integrity Impact (N/L/H)
 - Availability Impact (N/L/H)
 
-Vedi [METHODOLOGY.md](docs/METHODOLOGY.md) per i dettagli.
+### Metodologia e criteri di scoring
+
+Il modello MCSS si basa su criteri espliciti di valutazione delle configurazioni. Sebbene la scelta di pesi e classificazioni rifletta esperienze tecniche e giudizi umani, questi criteri sono:
+
+ * **espliciti e documentati**, per garantire trasparenza;
+ * **replicabili**, affinché valutazioni diverse diano risultati confrontabili;
+ * **coerenti nel tempo**, con la possibilità di revisioni migliorative attraverso feedback della comunità.
+
+L’uso di scelte metodologiche non elimina la soggettività, ma la **struttura e la documentazione consentono una tensione continua verso miglioramenti**. Le calibrazioni future potranno anche essere validate empiricamente.
+
+Per un approfondimento sulle scelte metodologiche e sulla filosofia del modello, vedi anche i documenti aggiuntivi (`docs/VISIONE.md`, `docs/Perché_MCSS.md`, [METHODOLOGY.md](docs/METHODOLOGY.md)).
 
 ## Contribuire
 
